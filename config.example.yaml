@@ -1,0 +1,34 @@
+# ──────────────────────────────────────────────────────────────
+# Discord AI Bridge — Configuration Template
+# ──────────────────────────────────────────────────────────────
+# Copy this file to  config.yaml  and fill in your real values.
+# ──────────────────────────────────────────────────────────────
+
+# The Discord channel where messages will be routed.
+channel_id: "YOUR_CHANNEL_ID_HERE"
+
+# Each identity represents a distinct AI persona.
+# - name:        Display name shown in Discord.
+# - webhook_url: Discord Webhook URL for this identity.
+# - avatar_url:  (optional) Custom avatar image URL.
+identities:
+  - name: "Claude"
+    webhook_url: "https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEBHOOK_TOKEN"
+    avatar_url: "https://example.com/claude-avatar.png"
+
+  - name: "GPT-4"
+    webhook_url: "https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEBHOOK_TOKEN"
+    avatar_url: "https://example.com/gpt4-avatar.png"
+
+  - name: "Gemini"
+    webhook_url: "https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEBHOOK_TOKEN"
+    avatar_url: "https://example.com/gemini-avatar.png"
+
+# ──────────────────────────────────────────────────────────────
+# Optional: API keys for upstream AI providers (not used by the
+# bridge itself, but handy to keep in one config file).
+# ──────────────────────────────────────────────────────────────
+api_keys:
+  openai: "sk-YOUR_OPENAI_API_KEY"
+  anthropic: "sk-ant-YOUR_ANTHROPIC_API_KEY"
+  google: "YOUR_GOOGLE_API_KEY"
